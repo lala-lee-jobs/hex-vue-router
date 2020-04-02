@@ -16,7 +16,10 @@
       </div>
     </nav>      
     <!-- <img src="./assets/logo.png"> -->
-    <router-view></router-view>
+    <router-view name="menu"></router-view>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -29,9 +32,7 @@ export default {
     HelloWorld
   },
   data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+    return {}
   }
 }
 </script>

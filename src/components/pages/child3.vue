@@ -11,7 +11,11 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            user: {
+                picture: {},
+            }
+        };
     },
     created() {
         // console.log(this.$route.params.id);
@@ -19,10 +23,11 @@ export default {
         //     console.log(rs);
         // });
         const id = this.$route.params.id;
-        fetch(`https://randomuser.me/api/?seed=${id}`)
+        fetch(`https://randomuser.me/api/`)
             .then(rs => rs.json())
             .then(rs => {
                 console.log(rs);
+                this.user = rs.results[0];
             });
     },
 }

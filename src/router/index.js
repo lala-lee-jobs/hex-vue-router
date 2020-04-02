@@ -6,7 +6,7 @@ import Page from '../components/pages/page';
 import child from '../components/pages/child';
 import child2 from '../components/pages/child2';
 import child3 from '../components/pages/child3';
-
+import Menu from '../components/pages/menu';
 
 Vue.use(VueRouter);
 
@@ -14,12 +14,15 @@ export default new VueRouter( {
     routes: [
         {
             name: '首頁',
-            path: '/index',
+            path: '/',
             component: Home,
         },
         {
             path: '/page',
-            component: Page,
+            components: {
+                default: Page,
+                menu: Menu
+            },
             children: [
                 {
                     name: '卡片1',
@@ -33,7 +36,7 @@ export default new VueRouter( {
                 },
                 {
                     name: '卡片3',
-                    path: 'child/:id',
+                    path: 'child',
                     component: child3,
                 }
             ]
