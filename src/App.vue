@@ -6,11 +6,11 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Home</a> -->
-            <router-link class="nav-link" :to="{name:'首頁'}">Home</router-link>
+            <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Page</a> -->
-            <router-link class="nav-link" :to="{name:'分頁'}">Page</router-link>
+            <router-link class="nav-link" to="/page">Page</router-link>
           </li>
         </ul>
       </div>

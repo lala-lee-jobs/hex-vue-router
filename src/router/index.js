@@ -18,7 +18,6 @@ export default new VueRouter( {
             component: Home,
         },
         {
-            name: '分頁',
             path: '/page',
             component: Page,
             children: [
@@ -34,7 +33,7 @@ export default new VueRouter( {
                 },
                 {
                     name: '卡片3',
-                    path: 'child3',
+                    path: 'child/:id',
                     component: child3,
                 }
             ]

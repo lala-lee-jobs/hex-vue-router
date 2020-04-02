@@ -12,7 +12,19 @@
 export default {
     data() {
         return {};
-    }
+    },
+    created() {
+        // console.log(this.$route.params.id);
+        // this.$http.get('https://randomuser.me/api/').then(rs => {
+        //     console.log(rs);
+        // });
+        const id = this.$route.params.id;
+        fetch(`https://randomuser.me/api/?seed=${id}`)
+            .then(rs => rs.json())
+            .then(rs => {
+                console.log(rs);
+            });
+    },
 }
 </script>
 <style></style>
