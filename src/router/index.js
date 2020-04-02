@@ -10,7 +10,8 @@ import Menu from '../components/pages/menu';
 
 Vue.use(VueRouter);
 
-export default new VueRouter( {
+export default new VueRouter({
+    linkActiveClass: 'active',
     routes: [
         {
             name: '首頁',
